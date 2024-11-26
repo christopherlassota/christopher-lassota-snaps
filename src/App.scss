@@ -1,5 +1,5 @@
-@use './styles/partials/mixins' as *;
 @use './styles/partials/typography' as *;
+@use './styles/partials/mixins' as *;
 @use './styles/partials/variables' as *;
 
 // Comments to help relate to styleguide specifications
@@ -53,6 +53,7 @@ h3 {
 
 // Body copy
 p {
+    font-family: 'Outfit';
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 0.9375rem;

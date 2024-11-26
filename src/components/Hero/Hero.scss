@@ -1,0 +1,17 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.hero {
+    @include flex-center(column, center, flex-start);
+    padding: 1.5rem 1rem;
+
+    &__title {
+        padding: 0 0 1.5rem 0;
+    }
+
+    // &__statement {}
+
+    &__span {
+        font-style: italic;
+    }
+}

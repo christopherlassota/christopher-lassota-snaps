@@ -5,13 +5,13 @@
 }
 
 @font-face {
-    font-family: 'Newsreader-italic';
-    src: url(../../assets/fonts/Newsreader-LightItalic.woff) format("woff2");
+    font-family: 'Newsreader';
+    src: url(../../assets/fonts/alternative-files/Newsreader-LightItalic.woff2) format("woff2");
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Newsreader-light';
+    font-family: 'Newsreader';
     src: url(../../assets/fonts/alternative-files/Newsreader-Light.woff2) format("woff2");
     font-weight: 400;
     font-style: normal;
@@ -24,7 +24,7 @@
 }
 
 @font-face {
-    font-family: 'Outfit-light';
+    font-family: 'Outfit';
     src: url(../../assets/fonts/alternative-files/Outfit-Light.woff2) format("woff2");
     font-weight: 400;
     font-style: normal;
