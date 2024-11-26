@@ -1,0 +1,26 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header {
+    @include flex-center(row, space-between, center);
+    padding: 1.5rem 1rem;
+
+    // &__title {}
+
+    &__button {
+        @include flex-center(row,space-between,center);
+        border: 0.125rem solid $primary-accent;
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    &__filters {
+        color: $primary-accent;
+        padding-right: 0.5rem;
+    }
+
+    &__svg {
+        fill: $primary-accent;
+    }
+    // &__path {}
+}
