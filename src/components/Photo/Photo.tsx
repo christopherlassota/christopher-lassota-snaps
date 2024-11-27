@@ -17,8 +17,10 @@ const Photo = ({ name, imageUrl, tags }: PhotoProps) => {
       <div className="photo__name">{name}</div>
       <div className="photo__tagbar">
         <ul className="photo__taglist">
-          {tags.map((tag) => (
-            <li key={Photo.id}className="photo__tag">{tag}</li>
+          {tags.map((tag, index) => (
+            <li key={index} className="photo__tag">
+              {tag}
+            </li>
           ))}
         </ul>
       </div>

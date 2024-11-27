@@ -1,0 +1,31 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.filter{
+    display: none;
+    background-color: $alternate-bg;
+    padding: 1rem;
+    width: 100%;
+    
+    &--toggle {
+        display: inline-block;
+    }
+
+    // &__title {}
+
+    &__tag-list {
+        @include flex-center(row, flex-start, flex-start);
+        flex-wrap: wrap;
+        list-style-type: none;
+    }
+
+    &__tag {
+        padding: 6px 8px;
+        margin: 4px;
+        color: $primary-accent;
+        border: 1px solid $primary-accent;
+        border-radius: 12px;
+        background-color: $tag-bg;
+    }
+}
+

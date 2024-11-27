@@ -1,11 +1,11 @@
 import "./PhotoGallery.scss";
 import Photo from "../Photo/Photo";
-import photos from "../../data/photos.json";
+import photosData from "../../data/photos.json";
 
 const PhotoGallery = () => {
   return (
     <section className="photogallery">
-      {photos.map((photo) => (
+      {photosData.map((photo) => (
         <Photo
           key={photo.id}
           name={photo.photographer}

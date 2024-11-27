@@ -2,8 +2,11 @@
 @use '../../styles/partials/mixins' as *;
 
 .header {
-    @include flex-center(row, space-between, center);
-    padding: 1.5rem 1rem;
+
+    &__container {
+        @include flex-center(row, space-between, center);
+        padding: 1.5rem 1rem;
+    }
 
     // &__title {}
 
@@ -12,15 +15,30 @@
         border: 0.125rem solid $primary-accent;
         border-radius: 1rem;
         padding: 0.5rem 1rem;
+
+        &--selected {
+            background-color: $primary-accent;
+        }
     }
 
     &__filters {
         color: $primary-accent;
         padding-right: 0.5rem;
+
+        &--selected {
+            color: $alternate-text;
+        }
     }
 
-    &__svg {
+    // &__svg {
+    //     fill: $primary-accent;
+    // }
+
+    &__path {
         fill: $primary-accent;
+
+        &--selected {
+            fill: $alternate-text;
+        }
     }
-    // &__path {}
 }
