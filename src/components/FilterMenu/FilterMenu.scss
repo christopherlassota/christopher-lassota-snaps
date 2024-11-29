@@ -26,6 +26,11 @@
         border: 1px solid $primary-accent;
         border-radius: 12px;
         background-color: $tag-bg;
+
+        &--selected {
+            background-color: $primary-accent;
+            color: $alternate-text;
+        }
     }
 }
 

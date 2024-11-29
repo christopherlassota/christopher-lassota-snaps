@@ -18,11 +18,11 @@ const Header = () => {
 
     filtersColor === "header__filters"
       ? setFiltersColor("header__filters header__filters--selected")
-      : setFiltersColor("header__filters")
+      : setFiltersColor("header__filters");
 
     pathColor === "header__path"
-      ? setPathColor('header__path header__path--selected')
-      : setPathColor('header__path')
+      ? setPathColor("header__path header__path--selected")
+      : setPathColor("header__path");
   };
 
   return (
