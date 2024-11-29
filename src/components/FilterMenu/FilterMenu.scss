@@ -2,15 +2,10 @@
 @use '../../styles/partials/mixins' as *;
 
 .filter{
-    display: none;
     background-color: $alternate-bg;
     padding: 1rem;
     width: 100%;
     
-    &--toggle {
-        display: inline-block;
-    }
-
     // &__title {}
 
     &__tag-list {
