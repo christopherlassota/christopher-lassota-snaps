@@ -9,6 +9,7 @@ body {
 }
 
 * {
+    font-family: 'Newsreader';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -63,4 +64,8 @@ p {
         font-weight: 500;
         line-height: 1.625rem;
     }
+}
+
+li {
+    font-family: 'outfit';
 }
