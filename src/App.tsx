@@ -12,30 +12,31 @@ const App = () => {
    * Change styling of filtermenu button when toggled on
    */
   const [filterMenuToggle, setFilterMenuToggle] = useState(false);
-  const [buttonState, setButtonState] = useState("");
-  
   const handleFilterClick = () => {
     setFilterMenuToggle(!filterMenuToggle);
-    buttonState === ""
-    ? setButtonState("--selected")
-    : setButtonState("");
   };
 
   /**
    * Select a tag
    */
   const [selectedTag, setSelectedTag] = useState("");
-  const handleTagClick = (tag:string) => {
-    selectedTag === tag
-    ? setSelectedTag("")
-    : setSelectedTag(tag)
-  }
-  
+  const handleTagClick = (tag: string) => {
+    selectedTag === tag ? setSelectedTag("") : setSelectedTag(tag);
+  };
+
   return (
     <>
-      <Header filterClick={handleFilterClick} buttonState={buttonState}/>
+      <Header
+        filterClick={handleFilterClick}
+        filterMenuToggle={filterMenuToggle}
+      />
       <main className="main">
-        {filterMenuToggle ? <FilterMenu handleTagClick={handleTagClick} selectedTag={selectedTag}/> : null}
+        {filterMenuToggle ? (
+          <FilterMenu
+            handleTagClick={handleTagClick}
+            selectedTag={selectedTag}
+          />
+        ) : null}
         <Hero />
         <PhotoGallery />
       </main>
