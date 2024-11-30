@@ -38,7 +38,9 @@ const App = () => {
           />
         ) : null}
         <Hero />
-        <PhotoGallery />
+        <PhotoGallery 
+          selectedTag={selectedTag}
+        />
       </main>
       <Footer />
     </>

@@ -1,11 +1,26 @@
 import "./PhotoGallery.scss";
 import Photo from "../Photo/Photo";
 import photosData from "../../data/photos.json";
+import { useState } from "react";
 
-const PhotoGallery = () => {
+interface PhotoGalleryProps {
+  selectedTag: string;
+}
+
+const PhotoGallery = ({ selectedTag }: PhotoGalleryProps) => {
+  const [photos, setPhotos] = useState(photosData);
+
+  let filteredPhotos = [];
+
+  selectedTag !== ""
+    ? (filteredPhotos = photos.filter((photo) => {
+        return photo.tags.includes(selectedTag);
+      }))
+    : (filteredPhotos = photos);
+
   return (
     <section className="photogallery">
-      {photosData.map((photo) => (
+      {filteredPhotos.map((photo) => (
         <Photo
           key={photo.id}
           name={photo.photographer}

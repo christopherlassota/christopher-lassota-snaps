@@ -7,6 +7,8 @@ interface PhotoProps {
 }
 
 const Photo = ({ name, imageUrl, tags }: PhotoProps) => {
+
+
   return (
     <article
       style={{
