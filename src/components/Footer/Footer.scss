@@ -12,10 +12,12 @@
     &__item {
         padding: 0.375rem 0;
     }
+
     &__icon-list {
         @include flex-center(row, flex-start, center);
         list-style-type: none;
     }
+    
     &__icon {
         padding: 0 1rem 0 0;
     }

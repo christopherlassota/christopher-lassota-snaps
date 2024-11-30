@@ -17,6 +17,7 @@ body {
 
 // title
 h1 {
+    font-family: 'Newsreader-light';
     font-size: 1.625rem;
     font-weight: 300;
     line-height: 2.375rem;
@@ -30,7 +31,7 @@ h1 {
 // Wordmark
 h2 {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 2rem;
     
     @include tablet {
@@ -42,6 +43,7 @@ h2 {
 
 // Heading
 h3 {
+    font-family: 'Outfit-light';
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 0.9375rem;

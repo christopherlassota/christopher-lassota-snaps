@@ -16,7 +16,7 @@ const Photo = ({ name, imageUrl, tags }: PhotoProps) => {
       }}
       className="photo"
     >
-      <div className="photo__name">{name}</div>
+      <p className="photo__name">{name}</p>
       <div className="photo__tagbar">
         <ul className="photo__taglist">
           {tags.map((tag, index) => (
