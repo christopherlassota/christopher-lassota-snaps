@@ -1,22 +1,19 @@
 import "./PhotoGallery.scss";
 import Photo from "../Photo/Photo";
 import photosData from "../../data/photos.json";
-import { useState } from "react";
 
 interface PhotoGalleryProps {
   selectedTag: string;
 }
 
 const PhotoGallery = ({ selectedTag }: PhotoGalleryProps) => {
-  const [photos, setPhotos] = useState(photosData);
-
   let filteredPhotos = [];
 
   selectedTag !== ""
-    ? (filteredPhotos = photos.filter((photo) => {
+    ? (filteredPhotos = photosData.filter((photo) => {
         return photo.tags.includes(selectedTag);
       }))
-    : (filteredPhotos = photos);
+    : (filteredPhotos = photosData);
 
   return (
     <section className="photogallery">

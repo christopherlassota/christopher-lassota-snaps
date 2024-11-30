@@ -9,7 +9,7 @@ const Header = ({ filterClick, filterMenuToggle }: HeaderProps) => {
   return (
     <header className="header">
       <section className="header__container">
-        <h1 className="header__title">Snaps</h1>
+        <h2 className="header__title">Snaps</h2>
         <div
           onClick={filterClick}
           className={`header__button ${

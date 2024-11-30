@@ -1,3 +1,4 @@
+@use '../../styles/partials/variables' as*;
 @use '../../styles/partials/mixins' as *;
 
 .footer {
@@ -16,13 +17,17 @@
         list-style-type: none;
     }
     &__icon {
-        padding: 0rem 0.5rem;
+        padding: 0 1rem 0 0;
     }
     // &__svg {}
     // &__path {}
     &__copyright-list {
         @include flex-center(row, flex-start, center);
         list-style-type: none;
+        padding: 1rem 0 0 0;
     }
-    // &__copyright {}
+    &__copyright {
+        color: $optional-text;
+        padding: 0 1rem 0 0;
+    }
 }
