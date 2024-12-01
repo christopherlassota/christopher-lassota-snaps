@@ -1,0 +1,11 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.photogallery {
+    
+    @include tablet {
+        @include flex-center(row, center, center);
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+}

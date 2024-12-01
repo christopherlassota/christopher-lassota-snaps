@@ -5,13 +5,23 @@
     background-color: $alternate-bg;
     padding: 1rem;
     width: 100%;
+
+    @include tablet {
+        padding: 2rem;
+    }
     
-    // &__title {}
+    &__title {
+        font-family: 'Outfit';
+    }
 
     &__tag-list {
         @include flex-center(row, flex-start, flex-start);
         flex-wrap: wrap;
         list-style-type: none;
+
+        @include tablet {
+            padding: 2rem 0;
+        }
     }
 
     &__tag {

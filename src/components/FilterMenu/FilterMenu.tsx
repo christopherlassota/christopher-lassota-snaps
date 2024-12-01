@@ -9,7 +9,7 @@ interface FilterMenuProps {
 const FilterMenu = ({ handleTagClick, selectedTag }: FilterMenuProps) => {
   return (
     <section className="filter">
-      <h2 className="filter__title">Filters</h2>
+      <h3 className="filter__title">Filters</h3>
       <ul className="filter__tag-list">
         {tagsData.map((tag, index) => {
           let isSelectedTag: boolean = tag === selectedTag;

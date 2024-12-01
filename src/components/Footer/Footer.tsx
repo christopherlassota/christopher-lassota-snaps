@@ -2,8 +2,10 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <section className="footer">
+    <footer className="footer">
+      <section className="footer__top">
       <h2 className="footer__title">Snaps</h2>
+      <article className="footer__links">
       <ul className="footer__list">
         <li className="footer__item">For Photographers</li>
         <li className="footer__item">Hire Talent</li>
@@ -14,6 +16,9 @@ const Footer = () => {
         <li className="footer__item">Careers</li>
         <li className="footer__item">Support</li>
       </ul>
+      </article>
+      </section>
+      <section className="footer__bottom">
       <ul className="footer__icon-list">
         <li className="footer__icon">
           <svg
@@ -103,7 +108,8 @@ const Footer = () => {
         <li className="footer__copyright">Privacy</li>
         <li className="footer__copyright">Cookies</li>
       </ul>
-    </section>
+      </section>
+    </footer>
   );
 };
 

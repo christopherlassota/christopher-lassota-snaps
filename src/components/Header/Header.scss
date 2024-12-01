@@ -6,6 +6,10 @@
     &__container {
         @include flex-center(row, space-between, center);
         padding: 1.5rem 1rem;
+
+        @include tablet {
+            padding: 2rem;
+        }
     }
 
     // &__title {}
@@ -13,8 +17,8 @@
     &__button {
         @include flex-center(row,space-between,center);
         border: 0.125rem solid $primary-accent;
-        border-radius: 1rem;
-        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        padding: 0.5rem 2rem;
 
         &--selected {
             background-color: $primary-accent;
@@ -24,7 +28,11 @@
     &__filters {
         color: $primary-accent;
         padding-right: 0.5rem;
-        font-weight: 700;
+        font-size: 0.75rem;
+
+        @include tablet {
+            font-size: 1rem;
+        }
 
         &--selected {
             color: $alternate-text;
