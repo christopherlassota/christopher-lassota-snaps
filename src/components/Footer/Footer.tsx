@@ -16,9 +16,6 @@ const Footer = () => {
         <li className="footer__item">Careers</li>
         <li className="footer__item">Support</li>
       </ul>
-      </article>
-      </section>
-      <section className="footer__bottom">
       <ul className="footer__icon-list">
         <li className="footer__icon">
           <svg
@@ -102,6 +99,9 @@ const Footer = () => {
           </svg>
         </li>
       </ul>
+      </article>
+      </section>
+      <section className="footer__bottom">
       <ul className="footer__copyright-list">
         <li className="footer__copyright">© 2024 Snaps</li>
         <li className="footer__copyright">Terms</li>

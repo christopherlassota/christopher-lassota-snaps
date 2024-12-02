@@ -13,7 +13,11 @@
         padding: 0 0 1.5rem 0;
     }
 
-    // &__statement {}
+    &__statement {
+        @include desktop {
+            width: 60%;
+        }
+    }
 
     &__span {
         font-style: italic;

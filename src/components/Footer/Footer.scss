@@ -3,9 +3,10 @@
 
 .footer {
     padding: 1rem;
+    position: relative;
 
     @include tablet {
-        padding: 2rem;
+        padding: 4rem 2rem 2rem 2rem;
     }
 
     &__top {
@@ -19,6 +20,10 @@
         @include tablet {
             @include flex-center(row,space-between, flex-start);
             width: 35%;
+
+            @include desktop {
+                width: 40%;
+            }
         }
     }
     // &__title {}
@@ -42,6 +47,18 @@
     &__icon-list {
         @include flex-center(row, flex-start, center);
         list-style-type: none;
+
+        @include tablet {
+            position: absolute;
+            right: 78%;
+            bottom: 15%;
+
+            @include desktop {
+                position: relative;
+                right: 0;
+                bottom: 0;
+            }
+        }
     }
     
     &__icon {

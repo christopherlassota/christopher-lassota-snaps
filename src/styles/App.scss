@@ -4,6 +4,28 @@
 
 // Comments to help relate to styleguide specifications
 
+.main {
+    background-color: $alternate-bg;
+
+    @include desktop {
+        @include flex-center(row-reverse, center, flex-start);
+    }
+    
+    &__filter {
+        background-color: $alternate-bg;
+        @include desktop {
+            height: 100vh;
+            max-width: 25%;
+        }
+    }
+
+    &__content {
+        background-color: $primary-bg;
+    }
+}
+
+
+
 body {
     background-color: $primary-bg;
 }

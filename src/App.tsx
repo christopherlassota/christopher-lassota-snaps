@@ -31,16 +31,18 @@ const App = () => {
         filterMenuToggle={filterMenuToggle}
       />
       <main className="main">
-        {filterMenuToggle ? (
-          <FilterMenu
-            handleTagClick={handleTagClick}
-            selectedTag={selectedTag}
-          />
-        ) : null}
-        <Hero />
-        <PhotoGallery 
-          selectedTag={selectedTag}
-        />
+          {filterMenuToggle ? (
+            <section className="main__filter">
+              <FilterMenu
+                handleTagClick={handleTagClick}
+                selectedTag={selectedTag}
+              />
+            </section>
+          ) : null}
+        <section className="main__content">
+          <Hero />
+          <PhotoGallery selectedTag={selectedTag} />
+        </section>
       </main>
       <Footer />
     </>
