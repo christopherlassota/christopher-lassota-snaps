@@ -12,6 +12,7 @@ const Header = ({ filterClick, filterMenuToggle }: HeaderProps) => {
         <h2 className="header__title">Snaps</h2>
         <div
           onClick={filterClick}
+          // Add selected styling if filterMenuToggle is true
           className={`header__button ${
             filterMenuToggle === true ? "header__button--selected" : ""
           }`}

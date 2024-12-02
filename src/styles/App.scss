@@ -2,8 +2,6 @@
 @use './partials/mixins' as *;
 @use './partials/variables' as *;
 
-// Comments to help relate to styleguide specifications
-
 .main {
     background-color: $alternate-bg;
 
@@ -24,7 +22,7 @@
     }
 }
 
-
+// Comments to help relate to styleguide specifications
 
 body {
     background-color: $primary-bg;

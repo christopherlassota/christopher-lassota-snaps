@@ -12,12 +12,10 @@
         }
     }
 
-    // &__title {}
-
     &__button {
         @include flex-center(row,space-between,center);
         border: 0.125rem solid $primary-accent;
-        border-radius: 50px;
+        border-radius: 3.125rem;
         padding: 0.5rem 2rem;
 
         &--selected {
@@ -38,10 +36,6 @@
             color: $alternate-text;
         }
     }
-
-    // &__svg {
-    //     fill: $primary-accent;
-    // }
 
     &__path {
         fill: $primary-accent;

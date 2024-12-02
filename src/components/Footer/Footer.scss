@@ -26,7 +26,7 @@
             }
         }
     }
-    // &__title {}
+
     &__list {
         list-style-type: none;
         padding: 1rem 1rem 1rem 0;
@@ -64,13 +64,13 @@
     &__icon {
         padding: 0 1rem 0 0;
     }
-    // &__svg {}
-    // &__path {}
+
     &__copyright-list {
         @include flex-center(row, flex-start, center);
         list-style-type: none;
         padding: 1rem 0 0 0;
     }
+    
     &__copyright {
         color: $optional-text;
         padding: 0 1rem 0 0;

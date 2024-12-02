@@ -12,6 +12,7 @@ const FilterMenu = ({ handleTagClick, selectedTag }: FilterMenuProps) => {
       <h3 className="filter__title">Filters</h3>
       <ul className="filter__tag-list">
         {tagsData.map((tag, index) => {
+          // Determine if current tag is the selected tag
           let isSelectedTag: boolean = tag === selectedTag;
           return (
             <li
@@ -19,6 +20,7 @@ const FilterMenu = ({ handleTagClick, selectedTag }: FilterMenuProps) => {
                 handleTagClick(tag);
               }}
               key={index}
+              // Add selected class if tag is selected
               className={`filter__tag ${
                 isSelectedTag ? `filter__tag--selected` : ""
               }`}

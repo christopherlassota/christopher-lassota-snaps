@@ -8,8 +8,8 @@ import FilterMenu from "./components/FilterMenu/FilterMenu";
 
 const App = () => {
   /**
-   * Toggle FilterMenu drop down
-   * Change styling of filtermenu button when toggled on
+   * State for toggling FilterMenu dropdown
+   * Change styling of FilterMenu button when toggled on
    */
   const [filterMenuToggle, setFilterMenuToggle] = useState(false);
   const handleFilterClick = () => {
@@ -17,7 +17,8 @@ const App = () => {
   };
 
   /**
-   * Select a tag
+   * State for managing the selected tag
+   * Clicking a tag will either select or deselect it
    */
   const [selectedTag, setSelectedTag] = useState("");
   const handleTagClick = (tag: string) => {
@@ -31,14 +32,14 @@ const App = () => {
         filterMenuToggle={filterMenuToggle}
       />
       <main className="main">
-          {filterMenuToggle ? (
-            <section className="main__filter">
-              <FilterMenu
-                handleTagClick={handleTagClick}
-                selectedTag={selectedTag}
-              />
-            </section>
-          ) : null}
+        {filterMenuToggle ? (
+          <section className="main__filter">
+            <FilterMenu
+              handleTagClick={handleTagClick}
+              selectedTag={selectedTag}
+            />
+          </section>
+        ) : null}
         <section className="main__content">
           <Hero />
           <PhotoGallery selectedTag={selectedTag} />
