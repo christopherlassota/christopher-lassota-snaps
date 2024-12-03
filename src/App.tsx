@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./styles/App.scss";
+import "./App.scss";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
