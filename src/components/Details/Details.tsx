@@ -1,6 +1,16 @@
 import "./Details.scss";
 
-const Details = ({ imageUrl,name,tags }: detailsProps) => {
+interface detailsProps {
+    imageUrl: string;
+    name: string;
+    tags: string[];
+    likes: number;
+    date: number;
+}
+
+const Details = ({ imageUrl,name,tags,likes,date }: detailsProps) => {
+    const formattedDate = new Date(date).toLocaleDateString('en-US');
+
     return (
         <article
       style={{
@@ -8,16 +18,19 @@ const Details = ({ imageUrl,name,tags }: detailsProps) => {
       }}
       className="details"
     >
-      <p className="details__name">{name}</p>
       <div className="details__tagbar">
         <ul className="details__taglist">
           {tags.map((tag:string, index:number) => (
-            <li key={index} className="details__tag">
+              <li key={index} className="details__tag">
               {tag}
             </li>
           ))}
         </ul>
-        
+        <ul className="details__like-list">
+            <li className="details__like-info">{likes}</li>
+            <li className="details__like-info">{formattedDate}</li>
+        </ul>
+          <p className="details__name">Photo by {name}</p>
       </div>
     </article>
     )

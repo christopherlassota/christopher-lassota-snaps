@@ -12,6 +12,8 @@ const PhotoDetails = () => {
     photographer: string;
     photo: string;
     tags: string[];
+    likes: number;
+    timestamp: number;
   }
 
   const params = useParams();
@@ -19,6 +21,8 @@ const PhotoDetails = () => {
     photographer: "",
     photo: "",
     tags: [],
+    likes: 0,
+    timestamp: 0
   });
 
   useEffect(() => {
@@ -33,9 +37,15 @@ const PhotoDetails = () => {
 
   return (
     <>
-    <Header />
-    <Details imageUrl={photoData.photo} name={photoData.photographer} tags={photoData.tags}/>
-    <Footer />
+      <Header />
+      <Details
+        imageUrl={photoData.photo}
+        name={photoData.photographer}
+        tags={photoData.tags}
+        likes={photoData.likes}
+        date={photoData.timestamp}
+      />
+      <Footer />
     </>
   );
 };
