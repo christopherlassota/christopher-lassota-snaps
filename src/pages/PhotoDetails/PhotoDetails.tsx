@@ -4,10 +4,11 @@ import { useParams } from "react-router-dom";
 import "./PhotoDetails.scss";
 import axios from "axios";
 import Header from "../../components/Header/Header";
+import Details from "../../components/Details/Details";
 import Footer from "../../components/Footer/Footer";
 
 const PhotoDetails = () => {
-  interface PhotoData {
+  interface photoData {
     photographer: string;
     photo: string;
     tags: string[];
@@ -33,23 +34,7 @@ const PhotoDetails = () => {
   return (
     <>
     <Header />
-    <article
-      style={{
-        backgroundImage: `url(${photoData.photo})`,
-      }}
-      className="photo"
-    >
-      <p className="photo__name">{photoData.photographer}</p>
-      <div className="photo__tagbar">
-        <ul className="photo__taglist">
-          {photoData.tags?.map((tag, index) => (
-            <li key={index} className="photo__tag">
-              {tag}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </article>
+    <Details imageUrl={photoData.photo} name={photoData.photographer} tags={photoData.tags}/>
     <Footer />
     </>
   );

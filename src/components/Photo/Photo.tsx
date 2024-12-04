@@ -1,5 +1,5 @@
 import "./Photo.scss";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface PhotoProps {
   photoId: string;
