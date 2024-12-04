@@ -20,7 +20,6 @@ const PhotoGallery = ({ selectedTag }: PhotoGalleryProps) => {
    * Get photoData from api instead of JSON
    */
 
-
   const [photoData, setPhotoData] = useState<photoData[]>([]);
   useEffect(() => {
     const fetchPhotos = async () => {
@@ -50,6 +49,7 @@ const PhotoGallery = ({ selectedTag }: PhotoGalleryProps) => {
       {filteredPhotos.map((photo) => (
         <Photo
           key={photo.id}
+          photoId={photo.id}
           name={photo.photographer}
           imageUrl={photo.photo}
           tags={photo.tags}
