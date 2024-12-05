@@ -5,6 +5,7 @@ import "./PhotoDetails.scss";
 import axios from "axios";
 import Header from "../../components/Header/Header";
 import Details from "../../components/Details/Details";
+import CommentSection from "../../components/CommentSection/CommentSection";
 import Footer from "../../components/Footer/Footer";
 
 const PhotoDetails = () => {
@@ -27,10 +28,14 @@ const PhotoDetails = () => {
 
   useEffect(() => {
     const fetchPhotos = async () => {
-      const response = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}?api_key=a90b1dab-b8ae-4277-9879-c9bcfe3201c3`
-      );
-      setPhotoData(response.data);
+      try {
+        const response = await axios.get(
+          `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}?api_key=a90b1dab-b8ae-4277-9879-c9bcfe3201c3`
+        );
+        setPhotoData(response.data);
+      } catch (error) {
+        console.log("Failed to fetch photos", error)
+      }
     };
     fetchPhotos();
   }, [params.id]);
@@ -45,6 +50,7 @@ const PhotoDetails = () => {
         likes={photoData.likes}
         date={photoData.timestamp}
       />
+      <CommentSection />
       <Footer />
     </>
   );
