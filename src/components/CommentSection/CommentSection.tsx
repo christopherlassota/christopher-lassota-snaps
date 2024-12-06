@@ -23,13 +23,13 @@ const CommentSection = () => {
     };
     fetchComments();
   });
-  
+
   return (
-      <section className="comments__posted">
-        <h2 className="comments__count">{commentData.length} comments</h2>
+      <section className="comment">
+        <h3 className="comment__count">{commentData.length} comments</h3>
         {commentData.map(({ name, comment, timestamp }, index) => (
-          <div key={index} className="comments__card">
-            <ul className="comments__info-bar">
+          <div key={index} className="comment__card">
+            <ul className="comment__info-bar">
               <li className="comment__info">{name}</li>
               <li className="comment__info">{new Date(timestamp).toLocaleDateString('en-US')}</li>
             </ul>
