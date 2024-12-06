@@ -1,10 +1,10 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState  } from "react";
 import { useParams } from "react-router-dom";
 import "./PhotoDetails.scss";
 import axios from "axios";
 import Header from "../../components/Header/Header";
 import Details from "../../components/Details/Details";
+import CommentForm from "../../components/CommentForm/CommentForm";
 import CommentSection from "../../components/CommentSection/CommentSection";
 import Footer from "../../components/Footer/Footer";
 
@@ -50,6 +50,7 @@ const PhotoDetails = () => {
         likes={photoData.likes}
         date={photoData.timestamp}
       />
+      <CommentForm />
       <CommentSection />
       <Footer />
     </>
