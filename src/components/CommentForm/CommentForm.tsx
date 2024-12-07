@@ -65,7 +65,7 @@ const CommentForm = () => {
           className="new-comment__text"
           onChange={handleInputChange}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="new-comment__button">Submit</button>
       </form>
     </section>
   );
