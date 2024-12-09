@@ -2,17 +2,20 @@
 @use '../../styles/partials/variables' as *;
 
 .photo {
-    @include flex-center(column, flex-end, flex-end);
-    width: auto;
-    height: 45vh;
-    background-position: center;
-    background-size: cover;
-    margin: 1rem;
-    border: 0.0625rem solid $border;
-    border-radius: 0.75rem;
+
+    &__card{
+        @include flex-center(column, flex-end, flex-end);
+        width: auto;
+        height: 45vh;
+        background-position: center;
+        background-size: cover;
+        margin: 1rem;
+        border: 0.0625rem solid $border;
+        border-radius: 0.75rem;
+    }
 
     @include tablet {
-        width: 46%;
+        flex: 1 0 50%;
     }
     
     @include desktop {

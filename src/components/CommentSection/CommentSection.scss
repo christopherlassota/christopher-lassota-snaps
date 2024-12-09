@@ -1,0 +1,36 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.comment {
+    padding: 1rem 1rem 4rem 1rem;
+
+    @include desktop {
+        padding: 1rem 16rem;
+    }
+
+    &__count {
+        font-family: 'Outfit';
+        padding: 0.5rem 0;
+       font-size: 1.25rem;
+    }
+
+    &__card {
+        padding: 0.5rem 0rem;
+        border-top: 0.125rem solid $border;
+         
+    }
+
+    &__info-bar {
+        @include flex-center(row, space-between, center);
+        list-style-type: none;
+        padding: 0.5rem 0;
+    }
+
+    &__info {
+        color: $primary-accent;
+    }
+
+    &__text {
+        color: $primary-text;
+    }
+}

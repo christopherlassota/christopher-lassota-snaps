@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import "./FilterMenu.scss";
-import tagsData from "../../data/tags.json";
 
 interface FilterMenuProps {
   handleTagClick: (tag: string) => void;
@@ -7,6 +8,19 @@ interface FilterMenuProps {
 }
 
 const FilterMenu = ({ handleTagClick, selectedTag }: FilterMenuProps) => {
+  const [tagsData, setTagsData] = useState([]);
+  useEffect(()=>{
+    const fetchTagsData = async () => {
+      try {
+        const response = await axios.get('https://unit-3-project-c5faaab51857.herokuapp.com/tags?api_key=a90b1dab-b8ae-4277-9879-c9bcfe3201c3')
+        setTagsData(response.data)
+      } catch (error) {
+        console.log("Failed to fetch tagsdata", error)
+      }
+    }
+    fetchTagsData()
+  })
+
   return (
     <section className="filter">
       <h3 className="filter__title">Filters</h3>

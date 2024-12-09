@@ -1,27 +1,6 @@
 @use './styles/partials/typography' as *;
 @use './styles/partials/mixins' as *;
 @use './styles/partials/variables' as *;
-
-.main {
-    background-color: $alternate-bg;
-
-    @include desktop {
-        @include flex-center(row-reverse, center, flex-start);
-    }
-    
-    &__filter {
-        background-color: $alternate-bg;
-        @include desktop {
-            height: 100vh;
-            max-width: 25%;
-        }
-    }
-
-    &__content {
-        background-color: $primary-bg;
-    }
-}
-
 // Comments to help relate to styleguide specifications
 
 body {
@@ -29,7 +8,7 @@ body {
 }
 
 * {
-    font-family: 'Newsreader';
+    font-family: 'Outfit';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,7 +16,7 @@ body {
 
 // title
 h1 {
-    font-family: 'Newsreader-light';
+    font-family: 'Newsreader';
     font-size: 1.625rem;
     font-weight: 300;
     line-height: 2.375rem;
@@ -50,6 +29,7 @@ h1 {
 
 // Wordmark
 h2 {
+    font-family: "Newsreader";
     font-size: 2rem;
     font-weight: 500;
     line-height: 2rem;
@@ -63,7 +43,7 @@ h2 {
 
 // Heading
 h3 {
-    font-family: 'Outfit-light';
+    // font-family: 'Outfit';
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 0.9375rem;
@@ -92,4 +72,11 @@ p {
 li {
     font-family: 'outfit';
     font-weight: 500;
+}
+
+// Links inherit styling
+a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
 }
