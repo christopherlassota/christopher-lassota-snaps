@@ -6,29 +6,55 @@
     &__form {
         @include flex-center(column, center, flex-start);
         padding: 1rem;
+
+        @include desktop {
+            padding: 1rem 16rem;
+        }
+
     }
     
     &__label {
         padding: 0.5rem 0;
-        font-weight: 600;
+        font-weight: 500;
         font-family: 'Outfit';
     }
-
+    
     &__name {
         width: 100%;
         min-height: 2.25rem;
         background-color: $input-bg;
-        border: 1.5px solid $border;
-        border-radius: 8px;
+        border: 0.0625rem solid $border;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        outline: none;
+        font-weight: 500;
+        
+        &:hover{
+            border: 2px solid black;
+        }
+        
+        &--error {
+            border: 2px solid red;
+        }
     }
     
     &__text {
         width: 100%;
         height: 12vh;
         background-color: $input-bg;
-        border: 1.5px solid $border;
-        border-radius: 8px;
-        margin: 0 0 1.5rem 0;
+        border: 0.0625rem solid $border;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        outline: none;
+        font-weight: 500;
+
+        &:hover{
+            border: 2px solid black;
+        }
+        
+        &--error {
+            border: 2px solid red;
+        }
     }
     
     &__button {
@@ -37,7 +63,12 @@
         color: $alternate-text;
         font-family: 'Outfit';
         padding: 0.6rem 1rem;
+        margin: 1.5rem 0 0 0;
         border: none;
-        border-radius: 12px;
+        border-radius: 0.75rem;
+    }
+
+    &__error {
+        color: red;
     }
 }

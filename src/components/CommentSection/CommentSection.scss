@@ -2,17 +2,22 @@
 @use '../../styles/partials/mixins' as *;
 
 .comment {
-    padding: 1rem;
+    padding: 1rem 1rem 4rem 1rem;
+
+    @include desktop {
+        padding: 1rem 16rem;
+    }
+
     &__count {
         font-family: 'Outfit';
         padding: 0.5rem 0;
-        border-bottom: 1px solid $border;
+       font-size: 1.25rem;
     }
+
     &__card {
         padding: 0.5rem 0rem;
-        border-bottom: 2px solid $border;
+        border-top: 0.125rem solid $border;
          
-        // &--last {}
     }
 
     &__info-bar {

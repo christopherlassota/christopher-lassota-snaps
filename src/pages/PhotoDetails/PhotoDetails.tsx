@@ -1,4 +1,4 @@
-import { useEffect, useState  } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./PhotoDetails.scss";
 import axios from "axios";
@@ -23,7 +23,7 @@ const PhotoDetails = () => {
     photo: "",
     tags: [],
     likes: 0,
-    timestamp: 0
+    timestamp: 0,
   });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const PhotoDetails = () => {
         );
         setPhotoData(response.data);
       } catch (error) {
-        console.log("Failed to fetch photos", error)
+        console.log("Failed to fetch photos", error);
       }
     };
     fetchPhotos();
@@ -42,7 +42,12 @@ const PhotoDetails = () => {
 
   return (
     <>
-      <Header />
+      <Header
+        filterClick={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+        filterMenuToggle={false}
+      />
       <Details
         imageUrl={photoData.photo}
         name={photoData.photographer}

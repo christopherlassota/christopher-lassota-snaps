@@ -10,12 +10,12 @@ interface PhotoProps {
 
 const Photo = ({ photoId, name, imageUrl, tags }: PhotoProps) => {
   return (
-    <Link to={`/photo-details/${photoId}`}>
+    <Link className="photo" to={`/photo-details/${photoId}`}>
       <article
         style={{
           backgroundImage: `url(${imageUrl})`,
         }}
-        className="photo"
+        className="photo__card"
       >
         <p className="photo__name">{name}</p>
         <div className="photo__tagbar">

@@ -1,6 +1,5 @@
 import "./Header.scss";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 interface HeaderProps {
   filterClick: () => void;
@@ -8,7 +7,9 @@ interface HeaderProps {
 }
 
 const Header = ({ filterClick, filterMenuToggle }: HeaderProps) => {
-  const params = useParams();
+  const location = useLocation();
+
+  const isHomePage = location.pathname === "/";
 
   return (
     <header className="header">
@@ -16,7 +17,7 @@ const Header = ({ filterClick, filterMenuToggle }: HeaderProps) => {
         <Link to="/">
         <h2 className="header__title">Snaps</h2>
         </Link>
-        {typeof params.id === "undefined" ? (
+        {isHomePage ? (
           <div
             onClick={filterClick}
             // Add selected styling if filterMenuToggle is true
