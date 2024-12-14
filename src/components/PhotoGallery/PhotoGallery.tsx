@@ -24,7 +24,7 @@ const PhotoGallery = ({ selectedTag }: PhotoGalleryProps) => {
   useEffect(() => {
     const fetchPhotos = async () => {
       const response = await axios.get(
-        "https://unit-3-project-c5faaab51857.herokuapp.com/photos/?api_key=a90b1dab-b8ae-4277-9879-c9bcfe3201c3"
+        "http://localhost:8080/photos/"
       );
       setPhotoData(response.data);
     };

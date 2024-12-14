@@ -11,7 +11,7 @@ const CommentSection = () => {
     const fetchComments = async () => {
       try {
         const response = await axios.get(
-          `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${params.id}/comments?api_key=a90b1dab-b8ae-4277-9879-c9bcfe3201c3`
+          `http://localhost:8080/photos/${params.id}/comments`
         );
         const commentsResponse = response.data;
         setCommentData(

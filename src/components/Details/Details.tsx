@@ -13,7 +13,7 @@ const Details = ({ imageUrl, name, tags, likes, date }: detailsProps) => {
     <section className="details">
       <article
         style={{
-          backgroundImage: `url(${imageUrl})`,
+          backgroundImage: `url(http://localhost:8080/images/${imageUrl})`,
         }}
         className="details__card"
       >

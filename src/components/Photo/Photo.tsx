@@ -13,7 +13,7 @@ const Photo = ({ photoId, name, imageUrl, tags }: PhotoProps) => {
     <Link className="photo" to={`/photo-details/${photoId}`}>
       <article
         style={{
-          backgroundImage: `url(${imageUrl})`,
+          backgroundImage: `url(http://localhost:8080/images/${imageUrl})`,
         }}
         className="photo__card"
       >
