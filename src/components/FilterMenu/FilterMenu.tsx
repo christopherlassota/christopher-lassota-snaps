@@ -12,7 +12,7 @@ const FilterMenu = ({ handleTagClick, selectedTag }: FilterMenuProps) => {
   useEffect(()=>{
     const fetchTagsData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/tags')
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_PORT}/tags`)
         setTagsData(response.data)
       } catch (error) {
         console.log("Failed to fetch tagsdata", error)

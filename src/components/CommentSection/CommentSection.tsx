@@ -11,7 +11,7 @@ const CommentSection = () => {
     const fetchComments = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/photos/${params.id}/comments`
+          `${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_PORT}/photos/${params.id}/comments`
         );
         const commentsResponse = response.data;
         setCommentData(

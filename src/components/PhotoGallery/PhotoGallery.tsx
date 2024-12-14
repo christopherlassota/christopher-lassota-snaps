@@ -24,7 +24,7 @@ const PhotoGallery = ({ selectedTag }: PhotoGalleryProps) => {
   useEffect(() => {
     const fetchPhotos = async () => {
       const response = await axios.get(
-        "http://localhost:8080/photos/"
+        `${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_PORT}/photos/`
       );
       setPhotoData(response.data);
     };

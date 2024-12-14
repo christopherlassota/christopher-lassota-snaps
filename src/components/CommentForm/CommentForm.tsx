@@ -50,7 +50,7 @@ const CommentForm = () => {
   const postComment = async (comment: { name: string; comment: string }) => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/photos/${params.id}/comments`,
+        `${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_PORT}/photos/${params.id}/comments`,
         comment,
         { headers: { "Content-Type": "application/json" } }
       );
