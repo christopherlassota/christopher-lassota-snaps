@@ -13,7 +13,7 @@ const Details = ({ imageUrl, name, tags, likes, date }: detailsProps) => {
     <section className="details">
       <article
         style={{
-          backgroundImage: `url(http://localhost:8080/images/${imageUrl})`,
+          backgroundImage: `url(${import.meta.env.VITE_BACKEND_URL}${import.meta.env.VITE_PORT}/images/${imageUrl})`,
         }}
         className="details__card"
       >
