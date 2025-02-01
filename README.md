@@ -25,6 +25,8 @@ Backend: Node.js, Express
 
 ![](demos/snaps-responsive-demo.gif)
 
-### Find me on LinkedIn
-<img src="{https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white}">
-[LinkedIn]:https://www.linkedin.com/in/christopherlassota/
+### Thanks for checking out my project!
+
+find me on LinkedIn:
+![image]({https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white})
+https://www.linkedin.com/in/christopherlassota/
