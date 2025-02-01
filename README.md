@@ -16,6 +16,11 @@ Frontend: React, TypeScript, SCSS
 
 Backend: Node.js, Express
 
+## Screenshots
+
+![](snaps-home.png)
+![](snaps-filter.png)
+
 ## Demo
 
-![](snaps-responsive-demo.gif)
+![](demos/snaps-responsive-demo.gif)
