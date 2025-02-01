@@ -18,4 +18,4 @@ Backend: Node.js, Express
 
 ## Demo
 
-![]https://github.com/christopher-lassota-snaps/demos/snaps-responsive-demo.gif
+![](snaps-responsive-demo.gif)
