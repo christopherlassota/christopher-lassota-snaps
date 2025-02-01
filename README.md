@@ -18,8 +18,8 @@ Backend: Node.js, Express
 
 ## Screenshots
 
-![](snaps-home.png)
-![](snaps-filter.png)
+![](demos/snaps-home.png)
+![](demos/snaps-filter.png)
 
 ## Demo
 
